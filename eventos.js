@@ -1,10 +1,15 @@
 
 const elementoDiv = document.querySelector("div");
+const boton = document.getElementById("button");
 
-function evento(){
+function cboton(event) {
     event.stopPropagation();
-    alert('Hola! Soy el div')
+    alert('Hola!');
 }
 
-elementoDiv.addEventListener("click", evento);
 
+boton.addEventListener('click', cboton);
+
+elementoDiv.addEventListener('click', () => {
+  alert('Hola! Soy el div');
+});
